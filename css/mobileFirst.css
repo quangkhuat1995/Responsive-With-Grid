@@ -30,8 +30,9 @@
   
   .header{
     width:100%;
+    min-height:8vh;
     background-color: var(--clr-purple);
-    padding:10px 2%;
+    padding: 10px 2%;
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -41,7 +42,7 @@
     /* position:relative; de lam goc cho pop-up navbar */
   }
   .header_logo{
-    font-size:2.5rem;
+    font-size:1.5rem;
     margin-right:10%;
   }
   .burger{
@@ -70,7 +71,7 @@
   }
   .header_nav{
     position: absolute;
-    top:15vh;
+    top:8vh;
     left:0;
     background-color: var(--clr-purple);
     width:100%;
@@ -117,12 +118,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
-    color:#fff;
+    padding: 0 10% 50px;
+    color:#dadada;
   }
   .banner_info h1{
+    color:#fff;
     margin:0;
-    font-size: 3rem;
+    font-size: 2.5rem;
     word-spacing: .4rem;
     text-transform: capitalize;
   }
@@ -411,9 +413,13 @@
 
 
 /*===========
-    media Query for NAV CSS
+    media Query for desktop
     ===========*/
+
 @media (min-width:992px){
+  .header_logo{
+    font-size:2rem;
+  }
   .header_nav li{
     display: inline;
   }
@@ -426,13 +432,16 @@
     transform: unset;
     transition: unset;
   }
+  .banner_info p{
+    font-size: 1.2rem;
+  }
   .video_main{
     grid-template-columns: repeat(2, 1fr);
   }
   .video_main div{
     padding:0 10%;
   }
-  .gallery > h1{
+  .gallery > h1,  .banner_info h1{
     font-size:4rem;
     margin-bottom:1rem;
   }
@@ -456,6 +465,10 @@
     padding: 2% 10%!important;
   }
 }
+
+/*===========
+    media Query for tablet
+    ===========*/
 @media(min-width:768px){
   .intro{
     grid-template-columns: 1fr 1fr 1fr 1fr;
